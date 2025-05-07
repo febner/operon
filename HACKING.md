@@ -41,14 +41,14 @@ the project:
     {
       "name": "dev",
       "binaryDir": "${sourceDir}/build/dev",
-      "inherits": ["dev-mode", "ci-<os>"]
+      "inherits": ["dev-mode", "build-<os>"]
     }
   ]
 }
 ```
 
 You should replace `<os>` in your newly created presets file with the name of
-the operating system you have, which may be `win64` or `unix`. You can see what
+the operating system you have, which may be `windows`, `linux` or `osx`. You can see what
 these correspond to in the [`CMakePresets.json`](CMakePresets.json) file.
 
 `CMakeUserPresets.json` is also the perfect place in which you can put all

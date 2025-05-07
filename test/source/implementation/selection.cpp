@@ -19,7 +19,7 @@ TEST_CASE("Selection Distribution")
     size_t maxDepth = 12;
 
     auto random = Operon::Random(1234);
-    auto ds = Dataset("../data/Poly-10.csv", true);
+    auto ds = Dataset("./data/Poly-10.csv", true);
 
     auto target = "Y";
     auto variables = ds.GetVariables();

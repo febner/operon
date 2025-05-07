@@ -51,5 +51,7 @@ else()
     endif()
 endif()
 
-add_test(NAME operon_test COMMAND operon_test)
+include(doctest)
+doctest_discover_tests(operon_test)
+
 windows_set_path(operon_test operon::operon)

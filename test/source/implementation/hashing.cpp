@@ -122,7 +122,7 @@ TEST_CASE("Hash collisions") {
     size_t maxDepth = 100;
 
     Operon::RandomGenerator rd(1234);
-    auto ds = Dataset("../data/Poly-10.csv", true);
+    auto ds = Dataset("./data/Poly-10.csv", true);
 
     auto target = "Y";
     auto variables = ds.GetVariables();

@@ -1,0 +1,14 @@
+{
+    "name": "operon",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "operon",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack"
+            ]
+        }
+    },
+
+}

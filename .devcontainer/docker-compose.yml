@@ -1,0 +1,24 @@
+services:
+  operon:
+    container_name: ${DEVCONTAINER_NAME}
+
+    env_file :
+      - .env
+
+    entrypoint: "sleep infinity"
+    build:
+      dockerfile: Dockerfile
+
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+        # FROM_IMAGE: "nvidia/cuda:12.3.1-runtime-ubuntu22.04"
+    volumes:
+      # Mounts the project folder to '/workspace'. While this file is in .devcontainer,
+      # mounts are relative to the first file in the list, which is a level up.
+      - ../:/workspace:cached
+      - nixstore:/nix/store:cached
+      - ./data:/data
+
+volumes:
+  nixstore:
