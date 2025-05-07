@@ -35,8 +35,8 @@ RUN apt -y install --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
-# # create at least locae for en_US.UTF-8
-# RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen
+# create at least locae for en_US.UTF-8
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen
 
 # create non-root user and group and add it sudoers
 ARG USERNAME=code

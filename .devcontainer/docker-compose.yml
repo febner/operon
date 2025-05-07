@@ -18,6 +18,7 @@ services:
       # mounts are relative to the first file in the list, which is a level up.
       - ../:/workspace:cached
       - nixstore:/nix/store:cached
+      # using an existing folder might be beneficial, as non-root container user might not be able to write otherwise
       - ./data:/data
 
 volumes:

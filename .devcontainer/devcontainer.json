@@ -10,5 +10,6 @@
             ]
         }
     },
+    //"onCreateCommand": "nix-shell --command 'echo done building nix dev environment'",
 
 }
